@@ -67,8 +67,8 @@ export default class BoardsComponent implements OnInit {
       });
   
       dialogRef.afterClosed().subscribe(result => {
-
-        if (result !== null) {
+        
+        if (result !== undefined) {
           const addBoardReq:AddBoardRequest = result;
           this.boardService.addBoard(addBoardReq).subscribe(
             (resp) => {
